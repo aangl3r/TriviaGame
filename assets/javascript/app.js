@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //initialize variables
     var questionNumb = 0;
-    var time = 5;
+    var time = 20;
     var wins = 0;
     var losses = 0;
 
@@ -33,16 +33,16 @@ $(document).ready(function () {
             image: "<img src='assets/images/1993.png'>"
         },
         {
-            question: "Which of the below is the name of the faction that combines White and Black mana?",
+            question: "Which of the below is the faction that combines White and Black mana?",
             options: ["Azorious", "Orzhov", "Jeskai", "Rakdos"],
             answer: "Orzhov",
             image: "<img src='assets/images/orzhov.jpg'>"
         },
         //THIS QUESTION ISN'T WORKING FOR SOME REASON
         {
-            question: "Which of these creatures dies to Lightning Bolt?",
-            options: ["<img src='assets/images/serra.png'>", "<img src='assets/images/birds.png'>", "<img src='assets/images/ooze.png'>", "<img src='assets/images/dovin.png'>"],
-            answer: "<img src='assets/images/birds.png'>",
+            question: "How much damage does Lightning Bolt do?",
+            options: ["1", "3", "5", "It depends on the target"],
+            answer: "3",
             image: "<img src='assets/images/bolt.png'>"
         },
         {
@@ -55,7 +55,7 @@ $(document).ready(function () {
             question: "What is the most expensive Magic card in terms of US Dollars?",
             options: ["Jace, the Mindsculptor", "Emrakul, the Aeons Torn", "Black Lotus", "Nicol Bolas, the Ravager"],
             answer: "Black Lotus",
-            image: "<img src='assets/images/lotus.jpg'>"
+            image: "<img src='assets/images/lotus.png'>"
         },
         {
             question: "Which of the below is NOT a Magic: the Gathering rule set?",
@@ -74,7 +74,7 @@ $(document).ready(function () {
     //start game
 
     $("#start").on("click", function () {
-        $("#game").html("<p>Time remaining: <span  id='timer'>" + time + "</span></p>");
+        $("#game").html("<p class='timer'>Time remaining: <span  id='timer'>" + time + "</span></p>");
         questionGen();
         userTime();
         timer();
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
     //generate question and answers on page
     function questionGen() {
-        $("#game").append("<p>" + questions[questionNumb].question + "</p>" +
+        $("#game").append("<p class='question'>" + questions[questionNumb].question + "</p>" +
             "<p class='options'>" + questions[questionNumb].options[0] + "</p>" +
             "<p class='options'>" + questions[questionNumb].options[1] + "</p>" +
             "<p class='options'>" + questions[questionNumb].options[2] + "</p>" +
@@ -127,7 +127,7 @@ $(document).ready(function () {
         //increment wins
         wins++;
         //display correct answer
-        $("#game").append("<p>The correct answer is: <span class='answer'>" + questions[questionNumb].answer + "</span></p>" +
+        $("#game").append("<p class='correctAnswer'>The correct answer is: <span class='answer'>" + questions[questionNumb].answer + "</span></p>" +
             //display image
             questions[questionNumb].image);
         //wait five seconds then move to next question
@@ -142,7 +142,7 @@ $(document).ready(function () {
         //increment losses
         losses++;
         //display correct answer
-        $("#game").append("<p>The correct answer is: <span class='answer'>" + questions[questionNumb].answer + "</span></p>" +
+        $("#game").append("<p class='correctAnswer'>The correct answer is: <span class='answer'>" + questions[questionNumb].answer + "</span></p>" +
             //display image
             questions[questionNumb].image);
         //wait five seconds then move to next question
@@ -159,7 +159,7 @@ $(document).ready(function () {
             //increment losses
             losses++;
             //display correct answer
-            $("#game").append("<p>The correct answer is: <span class='answer'>" + questions[questionNumb].answer + "</span></p>" +
+            $("#game").append("<p class='correctAnswer'>The correct answer is: <span class='answer'>" + questions[questionNumb].answer + "</span></p>" +
                 //display image
                 questions[questionNumb].image);
             //wait five seconds then move to next question
@@ -171,8 +171,8 @@ $(document).ready(function () {
 
     function nextQuestion() {
         if (questionNumb < questions.length) {
-            time = 5;
-            $("#game").html("<p>Time remaining: <span id='timer'>" + time + "</span></p>");
+            time = 20;
+            $("#game").html("<p class='timer'>Time remaining: <span id='timer'>" + time + "</span></p>");
             questionGen();
             timer();
             userTime();
@@ -220,6 +220,3 @@ $(document).ready(function () {
 
 
 })
-
-//different responses for each question on right / wrong
-//if else based on ending score
