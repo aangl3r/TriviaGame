@@ -12,19 +12,19 @@ $(document).ready(function () {
             question: "In Standard, what is each player's starting life total?",
             options: ["10", "20", "30", "40"],
             answer: "20",
-            image: "<img src='assets/images/d20.jpg'>"
+            image: "<img src='assets/images/d20.JPG'>"
         },
         {
             question: "Which of the following is NOT a color faction in Magic?",
             options: ["Green", "Black", "Red", "Yellow"],
             answer: "Yellow",
-            image: "<img src='assets/images/colors.jpg'>"
+            image: "<img src='assets/images/colors.JPG'>"
         },
         {
             question: "What is a punt?",
             options: ["A concession of a match based solely on the opening hand.", "Flipping the table and all cards onto the floor in anger.", "Losing to a single-turn knockout.", "A loss resulting directly from player error"],
             answer: "A loss resulting directly from player error",
-            image: "<img src='assets/images/punt.jpg'>"
+            image: "<img src='assets/images/punt.JPG'>"
         },
         {
             question: "When did Magic: the Gathering release its first set?",
@@ -36,7 +36,7 @@ $(document).ready(function () {
             question: "Which of the below is the faction that combines White and Black mana?",
             options: ["Azorious", "Orzhov", "Jeskai", "Rakdos"],
             answer: "Orzhov",
-            image: "<img src='assets/images/orzhov.jpg'>"
+            image: "<img src='assets/images/orzhov.JPG'>"
         },
         //THIS QUESTION ISN'T WORKING FOR SOME REASON
         {
@@ -49,7 +49,7 @@ $(document).ready(function () {
             question: "Which of the below is the highest converted mana cost?",
             options: ["(10)(G)(G)", "(X)(U)(G)", "(W)(U)(B)(R)(G)", "(G)(G)(G)(G)(G)(G)(G)(G)"],
             answer: "(10)(G)(G)",
-            image: "<img src='assets/images/ghalta.jpg'>"
+            image: "<img src='assets/images/ghalta.JPG'>"
         },
         {
             question: "What is the most expensive Magic card in terms of US Dollars?",
@@ -67,7 +67,7 @@ $(document).ready(function () {
             question: "What does FNM stand for?",
             options: ["Friday Night Magic", "Frontier's New Magic", "Forfeit No Match", "Forge Nemesis Magic"],
             answer: "Friday Night Magic",
-            image: "<img src='assets/images/fnm.jpg'>"
+            image: "<img src='assets/images/fnm.JPG'>"
         }
     ];
 
