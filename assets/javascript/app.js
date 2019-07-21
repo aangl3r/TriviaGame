@@ -38,7 +38,6 @@ $(document).ready(function () {
             answer: "Orzhov",
             image: "<img src='assets/images/orzhov.JPG'>"
         },
-        //THIS QUESTION ISN'T WORKING FOR SOME REASON
         {
             question: "How much damage does Lightning Bolt do?",
             options: ["1", "3", "5", "It depends on the target"],
@@ -72,15 +71,12 @@ $(document).ready(function () {
     ];
 
     //start game
-
     $("#start").on("click", function () {
         $("#game").html("<p class='timer'>Time remaining: <span  id='timer'>" + time + "</span></p>");
         questionGen();
         userTime();
         timer();
     });
-
-
 
     //generate question and answers on page
     function questionGen() {
@@ -90,8 +86,6 @@ $(document).ready(function () {
             "<p class='options'>" + questions[questionNumb].options[2] + "</p>" +
             "<p class='options'>" + questions[questionNumb].options[3] + "</p>");
     };
-
-
 
     //timer function
     function timer() {
@@ -182,8 +176,6 @@ $(document).ready(function () {
         }
     }
 
-
-
     //score screen
     function results() {
         if (wins === questions.length) {
@@ -204,8 +196,6 @@ $(document).ready(function () {
         $("#start").click(nextQuestion);
     }
 
-
-
     //reset game
     function reset() {
         questionNumb = 0;
@@ -213,10 +203,4 @@ $(document).ready(function () {
         losses = 0;
         time = 20;
     }
-
-    
-
-
-
-
 })

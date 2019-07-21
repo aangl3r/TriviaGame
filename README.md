@@ -7,3 +7,5 @@ Players are presented with 10 multiple choice questions and 20 seconds to answer
 The quiz is graded instantly and feedback is presented after each answer.
 
 This project makes use of HTML, CSS, and Javascript/Jquery. 
+
+[Play the game now!](https://aangl3r.github.io/TriviaGame/)
